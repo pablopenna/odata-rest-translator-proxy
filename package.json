@@ -1,0 +1,26 @@
+{
+  "name": "odata-rest-translator-proxy",
+  "version": "0.0.1",
+  "description": "Proxy to act as a middle man between a REST client and an OData server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node dist/server.js",
+    "build": "tsc -p .",
+    "dev": "nodemon src/server.ts",
+    "clean:build": "rm -rf ./dist",
+    "clean": "rm -rf node_modules && npm run clean:build"
+  },
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.4.0",
+    "nodemon": "^3.1.14",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
