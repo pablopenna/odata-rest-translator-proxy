@@ -10,7 +10,7 @@
     "clean": "rm -rf node_modules && npm run clean:build"
   },
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "devDependencies": {
     "@types/aws-lambda": "^8.10.161",
     "@types/node": "^25.4.0",
