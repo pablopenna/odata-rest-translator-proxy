@@ -5,7 +5,7 @@ export const handler = async (event: APIGatewayProxyEvent, context: Context, _ca
     console.log(`Event: ${JSON.stringify(event, null, 2)}`);
     console.log(`Context: ${JSON.stringify(context, null, 2)}`);
 
-    await delay(1000);
+    await delay(100);
     
     return {
         statusCode: 200,

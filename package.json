@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Proxy to act as a middle man between a REST client and an OData server",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "build": "tsc -p .",
     "start": "lambda-local -l dist/index.js -h handler --watch 8000",
     "clean:build": "rm -rf ./dist",
@@ -13,8 +13,11 @@
   "type": "module",
   "devDependencies": {
     "@types/aws-lambda": "^8.10.161",
+    "@types/jest": "^30.0.0",
     "@types/node": "^25.4.0",
+    "jest": "^30.3.0",
     "lambda-local": "^2.2.0",
+    "ts-jest": "^29.4.6",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
   }
