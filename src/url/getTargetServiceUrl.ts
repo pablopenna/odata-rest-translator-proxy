@@ -1,6 +1,5 @@
 import { APIGatewayProxyEvent } from "aws-lambda"
-import { getBaseTargetUrl } from "./getBaseTargetUrl.js"
-import { getPathFromEvent } from "./getPath.js"
+import { getBaseTargetUrl, getPathFromEvent } from "."
 
 export const getTargetServiceUrl = (event: APIGatewayProxyEvent): string => {
     return `${getBaseTargetUrl()}${getPathFromEvent(event)}`;

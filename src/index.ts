@@ -1,9 +1,8 @@
 import '@dotenvx/dotenvx/config'
 import { Context, APIGatewayProxyCallback, APIGatewayProxyEvent, APIGatewayProxyResult } from 'aws-lambda';
 
-import { getFullTargetUrl } from './url/getFullTargetUrl.js';
-import { getTargetServiceUrl } from './url/getTargetServiceUrl.js';
-import { getMetadata } from './odata/getMetadata.js';
+import { getTargetServiceUrl } from '@/url';
+import { getMetadata } from '@/odata';
 
 export const handler = async (event: APIGatewayProxyEvent, context: Context, _callback: APIGatewayProxyCallback): Promise<APIGatewayProxyResult> => {
 

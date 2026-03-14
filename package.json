@@ -4,17 +4,21 @@
   "description": "Proxy to act as a middle man between a REST client and an OData server",
   "scripts": {
     "test": "jest",
-    "build": "tsc -p .",
-    "start": "lambda-local -l dist/index.js -h handler --watch 8000",
+    "build": "node esbuild.config.mjs",
+    "watch": "node esbuild.config.mjs --watch",
+    "start": "lambda-local -l dist/index.cjs -h handler --watch 8000",
+    "clean": "npm run clean:build",
     "clean:build": "rm -rf ./dist",
-    "clean": "rm -rf node_modules && npm run clean:build"
+    "clean:all": "rm -rf node_modules && npm run clean:build"
   },
   "license": "ISC",
   "type": "module",
   "devDependencies": {
     "@types/aws-lambda": "^8.10.161",
     "@types/jest": "^30.0.0",
-    "@types/node": "^25.4.0",
+    "@types/node": "^25.5.0",
+    "archiver": "^7.0.1",
+    "esbuild": "^0.27.4",
     "jest": "^30.3.0",
     "lambda-local": "^2.2.0",
     "ts-jest": "^29.4.6",
