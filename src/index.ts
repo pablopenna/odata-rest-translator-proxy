@@ -1,7 +1,8 @@
 import { Context, APIGatewayProxyCallback, APIGatewayProxyEvent, APIGatewayProxyResult } from 'aws-lambda';
 
 import { get_request_method, get_request_path, get_request_query_parameters_as_string } from '@/lambda';
-import { forward_request, ProxyResponse } from '@/proxy';
+import { adapt_request_path, forward_request, ProxyResponse } from '@/proxy';
+import { adapt_response } from './proxy/adapt_response';
 
 /** Function to be run by the Lambda */
 export const handler = async (event: APIGatewayProxyEvent, context: Context, _callback: APIGatewayProxyCallback): Promise<APIGatewayProxyResult> => {
@@ -20,9 +21,7 @@ export const handler = async (event: APIGatewayProxyEvent, context: Context, _ca
 
 export const main = async (method:string, path: string, query_params: string): Promise<ProxyResponse> => {
     console.log(`Method: ${method}, Path: ${path} , query params: ${query_params}`);
-    const forwarded_request = await forward_request(method, path, query_params);
-    return {
-        statusCode: forwarded_request.status,
-        body: forwarded_request.data,
-    };
+    const response = await forward_request(method, path, query_params);
+
+    return adapt_response(response, adapt_request_path(path));
 }
