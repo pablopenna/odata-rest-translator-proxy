@@ -1,4 +1,4 @@
-import { get_rest_service_base_url, get_odata_service_base_url } from "../../src/utils";
+import { get_rest_service_base_url, get_odata_service_base_url } from "../src/utils";
 
 describe('Environment variables', () => {
     test('URL envs are available', async () => {
