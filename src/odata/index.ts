@@ -1,1 +1,1 @@
-export * from './getMetadata';
+export * from './get_metadata';

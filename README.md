@@ -20,7 +20,7 @@ npm run start
 * Test
 
 ```sh
-curl --request POST --url http://localhost:8000/ --header 'content-type: application/json' --data '{"foo":"bar", "test": 0, "nest":{"one":1,"two":2}}'
+curl --request POST --url 'http://localhost:8000/Employee/1?format=json&yes=true' --header 'content-type: application/json' --data '{"foo":"bar", "test": 0, "nest":{"one":1,"two":2}}'
 
 ```
 

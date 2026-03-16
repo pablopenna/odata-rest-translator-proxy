@@ -6,7 +6,8 @@
     "test": "jest",
     "build": "node esbuild.config.mjs",
     "watch": "node esbuild.config.mjs --watch",
-    "start": "lambda-local -l dist/index.cjs -h handler --watch 8000",
+    "start": "npm run build && lambda-local -l dist/index.cjs -h handler --watch 8000",
+    "test-request": "curl --request POST --url 'http://localhost:8000/Employee/1?format=json&yes=true' --header 'content-type: application/json' --data '{\"foo\":\"bar\", \"test\": 0, \"nest\":{\"one\":1,\"two\":2}}'",
     "clean": "npm run clean:build",
     "clean:build": "rm -rf ./dist",
     "clean:all": "rm -rf node_modules && npm run clean:build"
