@@ -1,8 +1,9 @@
 import { get_odata_service_base_url } from "@/utils";
 import { adapt_request_path, adapt_request_query_params, ProxyResponse } from ".";
 import axios, { AxiosResponse } from "axios";
+import { QueryParameters } from "@/lambda";
 
-export const forward_request = async (method: string, path: string, query_params: string): Promise<AxiosResponse> => {
+export const forward_request = async (method: string, path: string, query_params: QueryParameters): Promise<AxiosResponse> => {
     const adapted_path = adapt_request_path(path);
     const adapted_query_params = adapt_request_query_params(query_params);
     const adapted_request_url = `${get_odata_service_base_url()}${adapted_path}${adapted_query_params}`
