@@ -7,8 +7,8 @@ import { adapt_response } from './proxy/adapt_response';
 /** Function to be run by the Lambda */
 export const handler = async (event: APIGatewayProxyEvent, context: Context, _callback: APIGatewayProxyCallback): Promise<APIGatewayProxyResult> => {
 
-    // console.log(`Event: ${JSON.stringify(event, null, 2)}`);
-    // console.log(`Context: ${JSON.stringify(context, null, 2)}`);
+    console.log(`Event: ${JSON.stringify(event, null, 2)}`);
+    console.log(`Context: ${JSON.stringify(context, null, 2)}`);
 
     const response = await main(
         get_request_method(event),

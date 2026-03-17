@@ -3,6 +3,8 @@ Proxy to acts as a middle man between a REST client and an OData server
 
 [![](https://img.plantuml.biz/plantuml/svg/TP313SCm24NlJC42MQ27AXiawWQevc2fiQaXKhDzZMjLIQEUWF_WoVAeHiNMvG5IQxn7eMHuOpKanL8hSB9e6yublpOFnPl3-XJ8o57s1W3y3eVhP_LIDS_LJMtSvHH8x4oRfLCENzxYWrKb9-M_sb_ihzfhEuUHKwW_y0O0)](https://editor.plantuml.com/uml/TP313SCm24NlJC42MQ27AXiawWQevc2fiQaXKhDzZMjLIQEUWF_WoVAeHiNMvG5IQxn7eMHuOpKanL8hSB9e6yublpOFnPl3-XJ8o57s1W3y3eVhP_LIDS_LJMtSvHH8x4oRfLCENzxYWrKb9-M_sb_ihzfhEuUHKwW_y0O0)
 
+By default, it redirects requests to the oData Northwind service: https://services.odata.org/V4/Northwind/Northwind.svc/
+
 ## Running locally
 
 * Build

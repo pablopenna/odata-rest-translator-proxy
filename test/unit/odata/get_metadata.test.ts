@@ -1,4 +1,4 @@
-import { getMetadata } from "../src/odata"
+import { getMetadata } from "../../../src/odata"
 
 describe('Get oData metadata', () => {
     test('returns 200', async () => {

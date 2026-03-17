@@ -1,4 +1,4 @@
-import { forward_request } from "../src/proxy"
+import { forward_request } from "../../../src/proxy"
 
 describe('Proxy forward request', () => {
     describe('Single entity', () => {

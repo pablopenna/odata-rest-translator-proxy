@@ -1,4 +1,4 @@
-import { adapt_response } from "../src/proxy"
+import { adapt_response } from "../../../src/proxy"
 
 describe('Adapt request url', () => {
     test.each([

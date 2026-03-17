@@ -1,4 +1,4 @@
-import { adapt_request_path } from "../src/proxy"
+import { adapt_request_path } from "../../../src/proxy"
 
 describe('Adapt request url', () => {
     test.each([
